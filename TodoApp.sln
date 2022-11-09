@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Ui", "TodoApp.Ui\TodoApp.Ui.csproj", "{A3749544-43AF-4E5F-AF12-83DC1FC76A7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Domain", "TodoApp.Domain\TodoApp.Domain.csproj", "{F7591ED1-135D-4C2C-B722-88EAC6A1DAE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3749544-43AF-4E5F-AF12-83DC1FC76A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3749544-43AF-4E5F-AF12-83DC1FC76A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3749544-43AF-4E5F-AF12-83DC1FC76A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3749544-43AF-4E5F-AF12-83DC1FC76A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7591ED1-135D-4C2C-B722-88EAC6A1DAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7591ED1-135D-4C2C-B722-88EAC6A1DAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7591ED1-135D-4C2C-B722-88EAC6A1DAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7591ED1-135D-4C2C-B722-88EAC6A1DAE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31E01BCD-B878-4C74-8321-AD32C6EFC6BA}
+	EndGlobalSection
+EndGlobal
