@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TodoApp.Ui.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "TodosLists",
+                name: "TodoLists",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -17,7 +17,7 @@ namespace TodoApp.Ui.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TodosLists", x => x.Id);
+                    table.PrimaryKey("PK_TodoLists", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -37,11 +37,11 @@ namespace TodoApp.Ui.Migrations
                 {
                     table.PrimaryKey("PK_Todos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Todos_TodosLists_TodoListId",
+                        name: "FK_Todos_TodoLists_TodoListId",
                         column: x => x.TodoListId,
-                        principalTable: "TodosLists",
+                        principalTable: "TodoLists",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -56,7 +56,7 @@ namespace TodoApp.Ui.Migrations
                 name: "Todos");
 
             migrationBuilder.DropTable(
-                name: "TodosLists");
+                name: "TodoLists");
         }
     }
 }

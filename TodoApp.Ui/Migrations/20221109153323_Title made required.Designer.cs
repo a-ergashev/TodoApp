@@ -10,8 +10,8 @@ using TodoApp.Ui.Data;
 namespace TodoApp.Ui.Migrations
 {
     [DbContext(typeof(TodoDataContext))]
-    [Migration("20221107160038_Initial")]
-    partial class Initial
+    [Migration("20221109153323_Title made required")]
+    partial class Titlemaderequired
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,13 +34,14 @@ namespace TodoApp.Ui.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DueDate")
+                    b.Property<DateTime?>("DueDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("TodoListId")
@@ -65,7 +66,7 @@ namespace TodoApp.Ui.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TodosLists");
+                    b.ToTable("TodoLists");
                 });
 
             modelBuilder.Entity("TodoApp.Domain.Todo", b =>
